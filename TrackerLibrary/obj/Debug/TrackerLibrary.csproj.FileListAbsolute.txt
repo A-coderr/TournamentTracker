@@ -1,0 +1,9 @@
+C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentTracker\TrackerLibrary\bin\Debug\TrackerLibrary.dll
+C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentTracker\TrackerLibrary\bin\Debug\TrackerLibrary.pdb
+C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentTracker\TrackerLibrary\bin\Debug\Dapper.dll
+C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentTracker\TrackerLibrary\bin\Debug\Dapper.xml
+C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.csproj.CoreCompileInputs.cache
+C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.csproj.CopyComplete
+C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.dll
+C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.pdb
+C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.csproj.AssemblyReference.cache
