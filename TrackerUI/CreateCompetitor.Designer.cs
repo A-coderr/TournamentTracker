@@ -67,6 +67,7 @@ namespace TrackerUI
             this.label1.Size = new System.Drawing.Size(170, 34);
             this.label1.TabIndex = 10;
             this.label1.Text = "First Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -78,6 +79,7 @@ namespace TrackerUI
             this.label2.Size = new System.Drawing.Size(167, 34);
             this.label2.TabIndex = 11;
             this.label2.Text = "Last Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -89,6 +91,7 @@ namespace TrackerUI
             this.label3.Size = new System.Drawing.Size(94, 34);
             this.label3.TabIndex = 12;
             this.label3.Text = "Email";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -100,6 +103,7 @@ namespace TrackerUI
             this.label4.Size = new System.Drawing.Size(195, 34);
             this.label4.TabIndex = 13;
             this.label4.Text = "Date of Birth";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -111,6 +115,7 @@ namespace TrackerUI
             this.label5.Size = new System.Drawing.Size(157, 34);
             this.label5.TabIndex = 14;
             this.label5.Text = "Belt Color";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtFirstName
             // 
@@ -118,6 +123,7 @@ namespace TrackerUI
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(324, 22);
             this.txtFirstName.TabIndex = 15;
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // txtLastName
             // 
@@ -125,6 +131,7 @@ namespace TrackerUI
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(324, 22);
             this.txtLastName.TabIndex = 16;
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
             // 
             // txtEmail
             // 
@@ -132,6 +139,7 @@ namespace TrackerUI
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(324, 22);
             this.txtEmail.TabIndex = 17;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtDateOfBirth
             // 
@@ -139,6 +147,7 @@ namespace TrackerUI
             this.txtDateOfBirth.Name = "txtDateOfBirth";
             this.txtDateOfBirth.Size = new System.Drawing.Size(324, 22);
             this.txtDateOfBirth.TabIndex = 18;
+            this.txtDateOfBirth.ValueChanged += new System.EventHandler(this.txtDateOfBirth_ValueChanged);
             // 
             // cmbBeltColor
             // 
@@ -147,6 +156,7 @@ namespace TrackerUI
             this.cmbBeltColor.Name = "cmbBeltColor";
             this.cmbBeltColor.Size = new System.Drawing.Size(324, 24);
             this.cmbBeltColor.TabIndex = 19;
+            this.cmbBeltColor.SelectedIndexChanged += new System.EventHandler(this.cmbBeltColor_SelectedIndexChanged);
             // 
             // CreateCompetitor
             // 

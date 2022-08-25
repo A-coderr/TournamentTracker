@@ -38,7 +38,7 @@ namespace TrackerLibrary
                 var c = new DynamicParameters();
                 c.Add("@FirstName", model.FirstName);
                 c.Add("@LastName", model.LastName);
-                c.Add("@EmailAddress", model.Email);
+                c.Add("@Email", model.Email);
                 c.Add("@DateOfBirth", model.DateOfBirth);
                 c.Add("@BeltColor", model.BeltColor);
                 c.Add("@TournamentId", model.TournamentId);
@@ -57,6 +57,19 @@ namespace TrackerLibrary
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
             {
                 output = connection.Query<CompetitorModel>("dbo.spCompetitor_GetAll").ToList();
+            }
+            return output;
+        }
+
+        public List<CompetitorModel> GetCompetitor_ByTournament(int tournamentId)
+        {
+            List<CompetitorModel> output;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
+            {
+                var p = new DynamicParameters();
+                p = new DynamicParameters();
+                p.Add("@TournamentId", tournamentId);
+                output = connection.Query<CompetitorModel>("dbo.spCompetitor_GetByTournament", p, commandType: CommandType.StoredProcedure).ToList();
             }
             return output;
         }
@@ -117,6 +130,34 @@ namespace TrackerLibrary
             }
         }
 
-        
+        public CompetitorModel UpdateCompetitor(CompetitorModel model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
+            {
+                var c = new DynamicParameters();
+                c.Add("@FirstName", model.FirstName);
+                c.Add("@LastName", model.LastName);
+                c.Add("@Email", model.Email);
+                c.Add("@DateOfBirth", model.DateOfBirth);
+                c.Add("@BeltColor", model.BeltColor);
+                c.Add("@TournamentId", model.TournamentId);
+                c.Add("@id", model.Id);
+
+                connection.Execute("dbo.spCompetitor_Update", c, commandType: CommandType.StoredProcedure);
+                return model;
+            }
+        }
+
+        public CompetitorModel DeleteCompetitor(CompetitorModel model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
+            {
+                var c = new DynamicParameters();
+                c.Add("@id", model.Id);
+
+                connection.Execute("dbo.spCompetitor_Delete", c, commandType: CommandType.StoredProcedure);
+                return model;
+            }
+        }
     }
 }

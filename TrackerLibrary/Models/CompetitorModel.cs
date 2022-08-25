@@ -33,6 +33,22 @@ namespace TrackerLibrary.Models
             BeltColor = beltColor;
             TournamentId = tournamentId;
         }
+
+        public CompetitorModel(int id, string firstName, string lastName, string email, DateTime dateOfBirth, string beltColor, int tournamentId)
+        {
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+            DateOfBirth = dateOfBirth;
+            BeltColor = beltColor;
+            TournamentId = tournamentId;
+        }
+
+        public CompetitorModel(int id)
+        {
+            Id = id;
+        }
     }
 
     

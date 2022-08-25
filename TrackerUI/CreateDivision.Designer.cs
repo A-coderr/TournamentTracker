@@ -39,6 +39,8 @@ namespace TrackerUI
             this.lstCompInDiv = new System.Windows.Forms.ListBox();
             this.btnRemoveFromDiv = new System.Windows.Forms.Button();
             this.cbClosed = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbDivType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtDivisionName
@@ -79,7 +81,7 @@ namespace TrackerUI
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.label3.Location = new System.Drawing.Point(20, 99);
+            this.label3.Location = new System.Drawing.Point(20, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 34);
             this.label3.TabIndex = 28;
@@ -90,7 +92,7 @@ namespace TrackerUI
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.label4.Location = new System.Drawing.Point(20, 221);
+            this.label4.Location = new System.Drawing.Point(20, 261);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(270, 34);
             this.label4.TabIndex = 30;
@@ -99,14 +101,14 @@ namespace TrackerUI
             // cmbComp
             // 
             this.cmbComp.FormattingEnabled = true;
-            this.cmbComp.Location = new System.Drawing.Point(306, 231);
+            this.cmbComp.Location = new System.Drawing.Point(306, 271);
             this.cmbComp.Name = "cmbComp";
             this.cmbComp.Size = new System.Drawing.Size(236, 24);
             this.cmbComp.TabIndex = 31;
             // 
             // btnAddToDiv
             // 
-            this.btnAddToDiv.Location = new System.Drawing.Point(583, 231);
+            this.btnAddToDiv.Location = new System.Drawing.Point(583, 271);
             this.btnAddToDiv.Name = "btnAddToDiv";
             this.btnAddToDiv.Size = new System.Drawing.Size(131, 36);
             this.btnAddToDiv.TabIndex = 32;
@@ -118,14 +120,14 @@ namespace TrackerUI
             // 
             this.lstCompInDiv.FormattingEnabled = true;
             this.lstCompInDiv.ItemHeight = 16;
-            this.lstCompInDiv.Location = new System.Drawing.Point(266, 99);
+            this.lstCompInDiv.Location = new System.Drawing.Point(266, 139);
             this.lstCompInDiv.Name = "lstCompInDiv";
             this.lstCompInDiv.Size = new System.Drawing.Size(324, 84);
             this.lstCompInDiv.TabIndex = 33;
             // 
             // btnRemoveFromDiv
             // 
-            this.btnRemoveFromDiv.Location = new System.Drawing.Point(609, 122);
+            this.btnRemoveFromDiv.Location = new System.Drawing.Point(609, 162);
             this.btnRemoveFromDiv.Name = "btnRemoveFromDiv";
             this.btnRemoveFromDiv.Size = new System.Drawing.Size(159, 36);
             this.btnRemoveFromDiv.TabIndex = 34;
@@ -137,12 +139,31 @@ namespace TrackerUI
             // 
             this.cbClosed.AutoSize = true;
             this.cbClosed.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cbClosed.Location = new System.Drawing.Point(306, 314);
+            this.cbClosed.Location = new System.Drawing.Point(275, 337);
             this.cbClosed.Name = "cbClosed";
             this.cbClosed.Size = new System.Drawing.Size(118, 21);
             this.cbClosed.TabIndex = 35;
             this.cbClosed.Text = "Close Division";
             this.cbClosed.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
+            this.label2.Location = new System.Drawing.Point(20, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(207, 34);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Division Type";
+            // 
+            // cmbDivType
+            // 
+            this.cmbDivType.FormattingEnabled = true;
+            this.cmbDivType.Location = new System.Drawing.Point(266, 72);
+            this.cmbDivType.Name = "cmbDivType";
+            this.cmbDivType.Size = new System.Drawing.Size(236, 24);
+            this.cmbDivType.TabIndex = 37;
             // 
             // CreateDivision
             // 
@@ -150,6 +171,8 @@ namespace TrackerUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.cmbDivType);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cbClosed);
             this.Controls.Add(this.btnRemoveFromDiv);
             this.Controls.Add(this.lstCompInDiv);
@@ -179,5 +202,7 @@ namespace TrackerUI
         private System.Windows.Forms.ListBox lstCompInDiv;
         private System.Windows.Forms.Button btnRemoveFromDiv;
         private System.Windows.Forms.CheckBox cbClosed;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbDivType;
     }
 }

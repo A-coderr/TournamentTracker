@@ -21,3 +21,4 @@ C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentT
 C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentTracker\TrackerUI\obj\Debug\TrackerUI.TournamentDashboard.resources
 C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreateCompetitor.resources
 C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreateDivision.resources
+C:\Users\akostyuk\Documents\Projects\Karate_Tournament_Tracker\KarateTournamentTracker\TrackerUI\obj\Debug\TrackerUI.UDCompetitor.resources
