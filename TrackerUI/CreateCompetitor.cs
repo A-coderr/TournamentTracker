@@ -24,11 +24,10 @@ namespace TrackerUI
             if (ValidateForm())
             {
                 CompetitorModel model = new CompetitorModel(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtDateOfBirth.Value, cmbBeltColor.Text, MainDashboard.mainDashboardInstance.tournament.Id);
-                //CompetitorEntryModel entrymodel = new CompetitorEntryModel(MainDashboard.mainDashboardInstance.tournament.Id);
                 GlobalConfig.Connection.CreateCompetitor(model);
-                //GlobalConfig.Connection.CreateCompetitorEntry(entrymodel);
 
-
+                //Adds competitor to Tournament Instance
+                MainDashboard.mainDashboardInstance.tournament.Competitors.Add(model);
 
                 //Clears text boxes for the next use
                 txtFirstName.Text = "";

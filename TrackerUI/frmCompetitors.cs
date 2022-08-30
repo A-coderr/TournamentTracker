@@ -29,6 +29,7 @@ namespace TrackerUI
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[3].Visible = false;
             dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[7].Visible = false;
         }
         private void btnAddCompetitor_Click(object sender, EventArgs e)
         {

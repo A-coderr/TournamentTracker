@@ -175,6 +175,9 @@ namespace TrackerUI
                 cmbBeltColor.SelectedValue = 0;
                 MessageBox.Show("Competitor Deleted");
 
+                //Removes competitor from Tournament Instance
+                MainDashboard.mainDashboardInstance.tournament.Competitors.Remove(model);
+
                 //Returns to the Competitors form
                 MainDashboard.mainDashboardInstance.mainPanel.Controls.Clear();
                 frmCompetitors frm = new frmCompetitors() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };

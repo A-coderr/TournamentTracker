@@ -74,6 +74,19 @@ namespace TrackerLibrary
             return output;
         }
 
+        public List<CompetitorModel> GetCompetitor_ByDivision(int divisionId)
+        {
+            List<CompetitorModel> output;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
+            {
+                var p = new DynamicParameters();
+                p = new DynamicParameters();
+                p.Add("@DivisionId", divisionId);
+                output = connection.Query<CompetitorModel>("dbo.spCompetitor_GetByDivision", p, commandType: CommandType.StoredProcedure).ToList();
+            }
+            return output;
+        }
+
         public List<TournamentModel> GetTournaments_All()
         {
             List<TournamentModel> output;
@@ -113,7 +126,7 @@ namespace TrackerLibrary
                 var c = new DynamicParameters();
                 c.Add("@Name", model.Name);
                 c.Add("@TournamentId", model.TournamentId);
-                c.Add("@DivisionType", model.Type);
+                c.Add("@Type", model.Type);
                 c.Add("@DivisionClosed", model.DivisionClosed);
                 c.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
@@ -182,6 +195,77 @@ namespace TrackerLibrary
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
             {
                 output = connection.Query<DivisionTypeModel>("dbo.spDivisionType_GetAll").ToList();
+            }
+            return output;
+        }
+
+        public DivisionModel UpdateDivision(DivisionModel model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
+            {
+                var c = new DynamicParameters();
+                c.Add("@Name", model.Name);
+                c.Add("@TournamentId", model.TournamentId);
+                c.Add("@Type", model.Type);
+                c.Add("@DivisionClosed", model.DivisionClosed);
+                c.Add("@id", model.Id);
+
+                connection.Execute("dbo.spDivision_Update", c, commandType: CommandType.StoredProcedure);
+
+                foreach (CompetitorModel competitorModel in model.EnteredCompetitors)
+                {
+                    c = new DynamicParameters();
+                    c.Add("@DivisionId", model.Id);
+                    c.Add("@CompetitorId", competitorModel.Id);
+                    c.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                    connection.Execute("dbo.spDivisionEntries_Insert", c, commandType: CommandType.StoredProcedure);
+                }
+
+                foreach (CompetitorModel competitorModel in model.CompetitorsToRemove)
+                {
+                    c = new DynamicParameters();
+                    c.Add("@DivisionId", model.Id);
+                    c.Add("@CompetitorId", competitorModel.Id);
+
+                    connection.Execute("dbo.spDivisionEntries_Remove", c, commandType: CommandType.StoredProcedure);
+                }
+
+                return model;
+            }
+            
+        }
+
+        public DivisionModel DeleteDivision(DivisionModel model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
+            {
+                var c = new DynamicParameters();
+                c.Add("@id", model.Id);
+
+                connection.Execute("dbo.spDivision_Delete", c, commandType: CommandType.StoredProcedure);
+
+                foreach (CompetitorModel competitorModel in model.EnteredCompetitors)
+                {
+                    c = new DynamicParameters();
+                    c.Add("@DivisionId", model.Id);
+                    c.Add("@CompetitorId", competitorModel.Id);
+
+                    connection.Execute("dbo.spDivisionEntries_Remove", c, commandType: CommandType.StoredProcedure);
+                }
+                return model;
+            }
+        }
+
+        public List<DivisionModel> GetDivision_ByTournament(int tournamentId)
+        {
+            List<DivisionModel> output;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
+            {
+                var p = new DynamicParameters();
+                p = new DynamicParameters();
+                p.Add("@TournamentId", tournamentId);
+                output = connection.Query<DivisionModel>("dbo.spDivision_GetByTournament", p, commandType: CommandType.StoredProcedure).ToList();
             }
             return output;
         }

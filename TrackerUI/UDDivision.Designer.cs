@@ -83,6 +83,7 @@ namespace TrackerUI
             this.btnRemoveFromDiv.TabIndex = 46;
             this.btnRemoveFromDiv.Text = "Remove from Division";
             this.btnRemoveFromDiv.UseVisualStyleBackColor = true;
+            this.btnRemoveFromDiv.Click += new System.EventHandler(this.btnRemoveFromDiv_Click);
             // 
             // lstCompInDiv
             // 
@@ -101,6 +102,7 @@ namespace TrackerUI
             this.btnAddToDiv.TabIndex = 44;
             this.btnAddToDiv.Text = "Add to Division";
             this.btnAddToDiv.UseVisualStyleBackColor = true;
+            this.btnAddToDiv.Click += new System.EventHandler(this.btnAddToDiv_Click);
             // 
             // cmbComp
             // 
@@ -163,6 +165,7 @@ namespace TrackerUI
             this.btnUpdateDivision.TabIndex = 38;
             this.btnUpdateDivision.Text = "Update";
             this.btnUpdateDivision.UseVisualStyleBackColor = false;
+            this.btnUpdateDivision.Click += new System.EventHandler(this.btnUpdateDivision_Click);
             // 
             // btnDeleteDivision
             // 
@@ -177,6 +180,7 @@ namespace TrackerUI
             this.btnDeleteDivision.TabIndex = 50;
             this.btnDeleteDivision.Text = "Delete";
             this.btnDeleteDivision.UseVisualStyleBackColor = false;
+            this.btnDeleteDivision.Click += new System.EventHandler(this.btnDeleteDivision_Click);
             // 
             // btnCancel
             // 
@@ -191,6 +195,7 @@ namespace TrackerUI
             this.btnCancel.TabIndex = 51;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // UDDivision
             // 

@@ -28,9 +28,9 @@ namespace TrackerUI
 
                 txtTournamentName.Text = "";
                 txtTournamentDate.Value = DateTime.Now;
-                //MainDashboard mainDashboard = new MainDashboard();
-                //mainDashboard.Show();
-                //this.Hide();
+                MainDashboard mainDashboard = new MainDashboard(model);
+                mainDashboard.Show();
+                this.Hide();
             }
             else
             {

@@ -15,9 +15,13 @@ namespace TrackerLibrary
         CompetitorModel DeleteCompetitor(CompetitorModel model);
         TournamentModel UpdateTournament(TournamentModel model);
         void CreateDivision(DivisionModel model);
+        DivisionModel UpdateDivision(DivisionModel model);
+        DivisionModel DeleteDivision(DivisionModel model);
         List<CompetitorModel> GetCompetitor_All();
         List<DivisionTypeModel> GetDivisionType_All();
+        List<DivisionModel> GetDivision_ByTournament(int tournamentId);
         List<CompetitorModel> GetCompetitor_ByTournament(int tournamentId);
+        List<CompetitorModel> GetCompetitor_ByDivision(int divisionId);
         List<TournamentModel> GetTournaments_All();
     }
 }

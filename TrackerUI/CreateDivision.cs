@@ -16,7 +16,7 @@ namespace TrackerUI
 {
     public partial class CreateDivision : Form
     {
-        List<CompetitorModel> availableCompetitors = MainDashboard.mainDashboardInstance.tournament.Competitors;
+        List<CompetitorModel> availableCompetitors = GlobalConfig.Connection.GetCompetitor_ByTournament(MainDashboard.mainDashboardInstance.tournament.Id);
         List<CompetitorModel> selectedCompetitors = new List<CompetitorModel>();
         List<DivisionTypeModel> divisionType = GlobalConfig.Connection.GetDivisionType_All();
         bool closed = false;
@@ -68,6 +68,16 @@ namespace TrackerUI
 
                 GlobalConfig.Connection.CreateDivision(divisionModel);
                 MessageBox.Show($"{txtDivisionName.Text} was created!");
+
+                //Adds division to Tournament Instance
+                MainDashboard.mainDashboardInstance.tournament.Divisions.Add(divisionModel);
+
+                //Returns to the Divisions form
+                MainDashboard.mainDashboardInstance.mainPanel.Controls.Clear();
+                frmDivisions frm = new frmDivisions() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                frm.FormBorderStyle = FormBorderStyle.None;
+                MainDashboard.mainDashboardInstance.mainPanel.Controls.Add(frm);
+                frm.Show();
             }
             else
             {
