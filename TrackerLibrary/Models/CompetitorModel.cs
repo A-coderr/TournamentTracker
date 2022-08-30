@@ -49,6 +49,14 @@ namespace TrackerLibrary.Models
         {
             Id = id;
         }
+
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName + " " + DateOfBirth.ToString();
+            }
+        }
     }
 
     

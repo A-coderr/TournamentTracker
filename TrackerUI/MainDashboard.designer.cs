@@ -30,6 +30,7 @@ namespace TrackerUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.btnTracker = new System.Windows.Forms.Button();
             this.btnGenerator = new System.Windows.Forms.Button();
             this.btnDivisions = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@ namespace TrackerUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnTracker);
             this.panel1.Controls.Add(this.btnGenerator);
             this.panel1.Controls.Add(this.btnDivisions);
@@ -53,6 +55,22 @@ namespace TrackerUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(281, 630);
             this.panel1.TabIndex = 0;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
+            this.btnSettings.Location = new System.Drawing.Point(0, 537);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(281, 93);
+            this.btnSettings.TabIndex = 4;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnTracker
             // 
@@ -69,7 +87,6 @@ namespace TrackerUI
             this.btnTracker.Text = "Tracker";
             this.btnTracker.UseVisualStyleBackColor = true;
             this.btnTracker.Click += new System.EventHandler(this.btnTracker_Click);
-            this.btnTracker.Leave += new System.EventHandler(this.btnTracker_Leave);
             // 
             // btnGenerator
             // 
@@ -86,7 +103,6 @@ namespace TrackerUI
             this.btnGenerator.Text = "Generator";
             this.btnGenerator.UseVisualStyleBackColor = true;
             this.btnGenerator.Click += new System.EventHandler(this.btnGenerator_Click);
-            this.btnGenerator.Leave += new System.EventHandler(this.btnGenerator_Leave);
             // 
             // btnDivisions
             // 
@@ -103,7 +119,6 @@ namespace TrackerUI
             this.btnDivisions.Text = "Divisions";
             this.btnDivisions.UseVisualStyleBackColor = true;
             this.btnDivisions.Click += new System.EventHandler(this.btnDivisions_Click);
-            this.btnDivisions.Leave += new System.EventHandler(this.btnDivisions_Leave);
             // 
             // btnCompetitors
             // 
@@ -120,7 +135,6 @@ namespace TrackerUI
             this.btnCompetitors.Text = "Competitors";
             this.btnCompetitors.UseVisualStyleBackColor = true;
             this.btnCompetitors.Click += new System.EventHandler(this.btnCompetitors_Click);
-            this.btnCompetitors.Leave += new System.EventHandler(this.btnCompetitors_Leave);
             // 
             // lblTitle
             // 
@@ -166,6 +180,7 @@ namespace TrackerUI
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainDashboard";
             this.Text = "MainDashboard";
+            this.Load += new System.EventHandler(this.MainDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -182,5 +197,6 @@ namespace TrackerUI
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel pnlFormLoader;
         private System.Windows.Forms.Label lblTournamentName;
+        private System.Windows.Forms.Button btnSettings;
     }
 }

@@ -186,6 +186,7 @@ namespace TrackerUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateDivision";
             this.Text = "CreateDivision";
+            this.Load += new System.EventHandler(this.CreateDivision_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

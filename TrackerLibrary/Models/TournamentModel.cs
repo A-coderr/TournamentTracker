@@ -23,5 +23,16 @@ namespace TrackerLibrary.Models
             Name = name;
             Date = date;
         }
+        public TournamentModel(int id, string name, DateTime date)
+        {
+            Id = id;
+            Name = name;
+            Date = date;
+        }
+
+        public TournamentModel(int id)
+        {
+            Id = id;
+        }
     }
 }

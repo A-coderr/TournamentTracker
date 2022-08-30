@@ -13,11 +13,13 @@ namespace TrackerUI
     {
         public static MainDashboard mainDashboardInstance;
         public Panel mainPanel;
+        public Label tName;
         public TournamentModel tournament;
         public MainDashboard(TournamentModel tournamentModel)
         {
             InitializeComponent();
             tournament = tournamentModel;
+            tName = lblTournamentName;
             LoadFormData();
 
             mainDashboardInstance = this;
@@ -33,11 +35,12 @@ namespace TrackerUI
 
         private void LoadFormData()
         {
-            lblTournamentName.Text = tournament.Id.ToString();
+            tName.Text = tournament.Name;
         }
 
         private void btnCompetitors_Click(object sender, EventArgs e)
         {
+            buttonsDeactivated();
             btnCompetitors.BackColor = Color.FromArgb(25, 33, 61);
             lblTitle.Text = "Competitors";
             this.pnlFormLoader.Controls.Clear();
@@ -50,6 +53,7 @@ namespace TrackerUI
 
         private void btnDivisions_Click(object sender, EventArgs e)
         {
+            buttonsDeactivated();
             btnDivisions.BackColor = Color.FromArgb(25, 33, 61);
             lblTitle.Text = "Divisions";
             this.pnlFormLoader.Controls.Clear();
@@ -61,6 +65,7 @@ namespace TrackerUI
 
         private void btnGenerator_Click(object sender, EventArgs e)
         {
+            buttonsDeactivated();
             btnGenerator.BackColor = Color.FromArgb(25, 33, 61);
             lblTitle.Text = "Generator";
             this.pnlFormLoader.Controls.Clear();
@@ -72,6 +77,7 @@ namespace TrackerUI
 
         private void btnTracker_Click(object sender, EventArgs e)
         {
+            buttonsDeactivated();
             btnTracker.BackColor = Color.FromArgb(25, 33, 61);
             lblTitle.Text = "Tracker";
             this.pnlFormLoader.Controls.Clear();
@@ -81,24 +87,30 @@ namespace TrackerUI
             frmTracker.Show();
         }
 
-        private void btnCompetitors_Leave(object sender, EventArgs e)
+        private void btnSettings_Click(object sender, EventArgs e)
         {
-            btnCompetitors.BackColor = Color.FromArgb(26, 26, 54);
+            buttonsDeactivated();
+            btnSettings.BackColor = Color.FromArgb(25, 33, 61);
+            lblTitle.Text = "Settings";
+            this.pnlFormLoader.Controls.Clear();
+            UDTournament ud = new UDTournament() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            ud.FormBorderStyle = FormBorderStyle.None;
+            this.pnlFormLoader.Controls.Add(ud);
+            ud.Show();
         }
 
-        private void btnDivisions_Leave(object sender, EventArgs e)
-        {
-            btnDivisions.BackColor = Color.FromArgb(26, 26, 54);
-        }
-
-        private void btnGenerator_Leave(object sender, EventArgs e)
+        private void buttonsDeactivated()
         {
             btnGenerator.BackColor = Color.FromArgb(26, 26, 54);
+            btnTracker.BackColor = Color.FromArgb(26, 26, 54);
+            btnCompetitors.BackColor = Color.FromArgb(26, 26, 54);
+            btnDivisions.BackColor = Color.FromArgb(26, 26, 54);
+            btnSettings.BackColor = Color.FromArgb(26, 26, 54);
         }
 
-        private void btnTracker_Leave(object sender, EventArgs e)
+        private void MainDashboard_Load(object sender, EventArgs e)
         {
-            btnCompetitors.BackColor = Color.FromArgb(26, 26, 54);
+            LoadFormData();
         }
     }
 }

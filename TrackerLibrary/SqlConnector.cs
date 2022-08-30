@@ -113,6 +113,8 @@ namespace TrackerLibrary
                 var c = new DynamicParameters();
                 c.Add("@Name", model.Name);
                 c.Add("@TournamentId", model.TournamentId);
+                c.Add("@DivisionType", model.Type);
+                c.Add("@DivisionClosed", model.DivisionClosed);
                 c.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
                 connection.Execute("dbo.spDivision_Insert", c, commandType: CommandType.StoredProcedure);
@@ -158,6 +160,30 @@ namespace TrackerLibrary
                 connection.Execute("dbo.spCompetitor_Delete", c, commandType: CommandType.StoredProcedure);
                 return model;
             }
+        }
+
+        public TournamentModel UpdateTournament(TournamentModel model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
+            {
+                var t = new DynamicParameters();
+                t.Add("@TournamentName", model.Name);
+                t.Add("@TournamentDate", model.Date);
+                t.Add("@id", model.Id);
+
+                connection.Execute("dbo.spTournament_Update", t, commandType: CommandType.StoredProcedure);
+                return model;
+            }
+        }
+
+        public List<DivisionTypeModel> GetDivisionType_All()
+        {
+            List<DivisionTypeModel> output;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
+            {
+                output = connection.Query<DivisionTypeModel>("dbo.spDivisionType_GetAll").ToList();
+            }
+            return output;
         }
     }
 }

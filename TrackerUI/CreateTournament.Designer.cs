@@ -47,6 +47,7 @@ namespace TrackerUI
             this.label1.Size = new System.Drawing.Size(273, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Create Tournament";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnCreateT
             // 
@@ -68,6 +69,7 @@ namespace TrackerUI
             this.txtTournamentDate.Name = "txtTournamentDate";
             this.txtTournamentDate.Size = new System.Drawing.Size(200, 22);
             this.txtTournamentDate.TabIndex = 2;
+            this.txtTournamentDate.ValueChanged += new System.EventHandler(this.txtTournamentDate_ValueChanged);
             // 
             // label2
             // 
@@ -78,6 +80,7 @@ namespace TrackerUI
             this.label2.Size = new System.Drawing.Size(119, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tournament Date";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -88,6 +91,7 @@ namespace TrackerUI
             this.label3.Size = new System.Drawing.Size(126, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tournament Name";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtTournamentName
             // 
@@ -95,6 +99,7 @@ namespace TrackerUI
             this.txtTournamentName.Name = "txtTournamentName";
             this.txtTournamentName.Size = new System.Drawing.Size(246, 22);
             this.txtTournamentName.TabIndex = 5;
+            this.txtTournamentName.TextChanged += new System.EventHandler(this.txtTournamentName_TextChanged);
             // 
             // CreateTournament
             // 
