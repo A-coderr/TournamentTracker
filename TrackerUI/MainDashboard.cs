@@ -13,18 +13,18 @@ namespace TrackerUI
     {
         public static MainDashboard mainDashboardInstance;
         public Panel mainPanel;
-        public Label tName;
+        public Button tName;
         public TournamentModel tournament;
         public MainDashboard(TournamentModel tournamentModel)
         {
             InitializeComponent();
             tournament = tournamentModel;
-            tName = lblTournamentName;
+            tName = btnTournamentName;
             LoadFormData();
 
             mainDashboardInstance = this;
             mainPanel = pnlFormLoader;
-            btnCompetitors.BackColor = Color.FromArgb(25, 33, 61);
+            btnCompetitors.BackColor = Color.FromArgb(130, 41, 133);
             lblTitle.Text = "Competitors";
             this.pnlFormLoader.Controls.Clear();
             frmCompetitors frmCompetitors = new frmCompetitors() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -41,7 +41,7 @@ namespace TrackerUI
         private void btnCompetitors_Click(object sender, EventArgs e)
         {
             buttonsDeactivated();
-            btnCompetitors.BackColor = Color.FromArgb(25, 33, 61);
+            btnCompetitors.BackColor = Color.FromArgb(130, 41, 133);
             lblTitle.Text = "Competitors";
             this.pnlFormLoader.Controls.Clear();
             frmCompetitors frmCompetitors = new frmCompetitors() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -54,7 +54,7 @@ namespace TrackerUI
         private void btnDivisions_Click(object sender, EventArgs e)
         {
             buttonsDeactivated();
-            btnDivisions.BackColor = Color.FromArgb(25, 33, 61);
+            btnDivisions.BackColor = Color.FromArgb(130, 41, 133);
             lblTitle.Text = "Divisions";
             this.pnlFormLoader.Controls.Clear();
             frmDivisions frmDivisions = new frmDivisions() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -66,7 +66,7 @@ namespace TrackerUI
         private void btnGenerator_Click(object sender, EventArgs e)
         {
             buttonsDeactivated();
-            btnGenerator.BackColor = Color.FromArgb(25, 33, 61);
+            btnGenerator.BackColor = Color.FromArgb(130, 41, 133);
             lblTitle.Text = "Generator";
             this.pnlFormLoader.Controls.Clear();
             frmGenerator frmGenerator = new frmGenerator() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -78,7 +78,7 @@ namespace TrackerUI
         private void btnTracker_Click(object sender, EventArgs e)
         {
             buttonsDeactivated();
-            btnTracker.BackColor = Color.FromArgb(25, 33, 61);
+            btnTracker.BackColor = Color.FromArgb(130, 41, 133);
             lblTitle.Text = "Tracker";
             this.pnlFormLoader.Controls.Clear();
             frmTracker frmTracker = new frmTracker() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -90,7 +90,7 @@ namespace TrackerUI
         private void btnSettings_Click(object sender, EventArgs e)
         {
             buttonsDeactivated();
-            btnSettings.BackColor = Color.FromArgb(25, 33, 61);
+            btnSettings.BackColor = Color.FromArgb(130, 41, 133);
             lblTitle.Text = "Settings";
             this.pnlFormLoader.Controls.Clear();
             UDTournament ud = new UDTournament() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -101,16 +101,21 @@ namespace TrackerUI
 
         private void buttonsDeactivated()
         {
-            btnGenerator.BackColor = Color.FromArgb(26, 26, 54);
-            btnTracker.BackColor = Color.FromArgb(26, 26, 54);
-            btnCompetitors.BackColor = Color.FromArgb(26, 26, 54);
-            btnDivisions.BackColor = Color.FromArgb(26, 26, 54);
-            btnSettings.BackColor = Color.FromArgb(26, 26, 54);
+            btnGenerator.BackColor = Color.FromArgb(51, 51, 77);
+            btnTracker.BackColor = Color.FromArgb(51, 51, 77);
+            btnCompetitors.BackColor = Color.FromArgb(51, 51, 77);
+            btnDivisions.BackColor = Color.FromArgb(51, 51, 77);
+            btnSettings.BackColor = Color.FromArgb(51, 51, 77);
         }
 
         private void MainDashboard_Load(object sender, EventArgs e)
         {
             LoadFormData();
+        }
+
+        private void btnTournamentName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

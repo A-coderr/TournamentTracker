@@ -19,7 +19,7 @@ namespace TrackerUI
         List<CompetitorModel> availableCompetitors = GlobalConfig.Connection.GetCompetitor_ByTournament(MainDashboard.mainDashboardInstance.tournament.Id);
 
         List<CompetitorModel> competitorsToAdd = new List<CompetitorModel>();
-        List<CompetitorModel> competitorsToRemove = new List<CompetitorModel>();
+        List<CompetitorModel> competitorsToRemove = GlobalConfig.Connection.GetCompetitor_ByTournament(MainDashboard.mainDashboardInstance.tournament.Id);
         List<DivisionTypeModel> divisionType = GlobalConfig.Connection.GetDivisionType_All();
         bool closed = false;
         string message = "";
@@ -29,10 +29,11 @@ namespace TrackerUI
             InitializeComponent();
             division = divisionM;
             selectedCompetitors = GlobalConfig.Connection.GetCompetitor_ByDivision(division.Id);
-            competitorsToAdd = selectedCompetitors;
+            competitorsToAdd = GlobalConfig.Connection.GetCompetitor_ByDivision(division.Id);
+            competitorsToRemove.RemoveAll(x => selectedCompetitors.Exists(y => y.Id == x.Id));
+
             //Removes all competitors that exists in list selected competitors
-            availableCompetitors.RemoveAll(x => selectedCompetitors.Exists(y => y.Id == x.Id));
-            competitorsToRemove = availableCompetitors;
+            availableCompetitors.RemoveAll(x => selectedCompetitors.Exists(y => y.Id == x.Id));            
             InitializeLists();
         }
 

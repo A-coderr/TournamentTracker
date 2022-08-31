@@ -36,12 +36,12 @@ namespace TrackerUI
             // 
             // btnAddCompetitor
             // 
-            this.btnAddCompetitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
+            this.btnAddCompetitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(41)))), ((int)(((byte)(133)))));
             this.btnAddCompetitor.FlatAppearance.BorderSize = 0;
             this.btnAddCompetitor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCompetitor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddCompetitor.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAddCompetitor.Location = new System.Drawing.Point(30, 427);
+            this.btnAddCompetitor.ForeColor = System.Drawing.Color.White;
+            this.btnAddCompetitor.Location = new System.Drawing.Point(303, 427);
             this.btnAddCompetitor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddCompetitor.Name = "btnAddCompetitor";
             this.btnAddCompetitor.Size = new System.Drawing.Size(213, 53);
@@ -53,7 +53,7 @@ namespace TrackerUI
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 42);
+            this.dataGridView1.Location = new System.Drawing.Point(34, 42);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -65,7 +65,7 @@ namespace TrackerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(818, 537);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAddCompetitor);
