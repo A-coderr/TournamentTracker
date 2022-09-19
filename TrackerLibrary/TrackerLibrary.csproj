@@ -51,6 +51,7 @@
     <Compile Include="Models\CompetitorModel.cs" />
     <Compile Include="Models\DivisionModel.cs" />
     <Compile Include="Models\DivisionTypeModel.cs" />
+    <Compile Include="Models\MatchModel.cs" />
     <Compile Include="Models\TournamentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlConnector.cs" />

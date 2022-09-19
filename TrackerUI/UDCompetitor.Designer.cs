@@ -47,35 +47,35 @@ namespace TrackerUI
             // cmbBeltColor
             // 
             this.cmbBeltColor.FormattingEnabled = true;
-            this.cmbBeltColor.Location = new System.Drawing.Point(336, 352);
+            this.cmbBeltColor.Location = new System.Drawing.Point(268, 335);
             this.cmbBeltColor.Name = "cmbBeltColor";
             this.cmbBeltColor.Size = new System.Drawing.Size(324, 24);
             this.cmbBeltColor.TabIndex = 30;
             // 
             // txtDateOfBirth
             // 
-            this.txtDateOfBirth.Location = new System.Drawing.Point(336, 275);
+            this.txtDateOfBirth.Location = new System.Drawing.Point(268, 258);
             this.txtDateOfBirth.Name = "txtDateOfBirth";
             this.txtDateOfBirth.Size = new System.Drawing.Size(324, 22);
             this.txtDateOfBirth.TabIndex = 29;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(336, 207);
+            this.txtEmail.Location = new System.Drawing.Point(268, 190);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(324, 22);
             this.txtEmail.TabIndex = 28;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(336, 140);
+            this.txtLastName.Location = new System.Drawing.Point(268, 123);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(324, 22);
             this.txtLastName.TabIndex = 27;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(336, 76);
+            this.txtFirstName.Location = new System.Drawing.Point(268, 59);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(324, 22);
             this.txtFirstName.TabIndex = 26;
@@ -83,64 +83,65 @@ namespace TrackerUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
-            this.label5.Location = new System.Drawing.Point(90, 342);
+            this.label5.Font = new System.Drawing.Font("Arial", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(41)))), ((int)(((byte)(133)))));
+            this.label5.Location = new System.Drawing.Point(69, 329);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 34);
+            this.label5.Size = new System.Drawing.Size(124, 28);
             this.label5.TabIndex = 25;
             this.label5.Text = "Belt Color";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
-            this.label4.Location = new System.Drawing.Point(90, 263);
+            this.label4.Font = new System.Drawing.Font("Arial", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(41)))), ((int)(((byte)(133)))));
+            this.label4.Location = new System.Drawing.Point(69, 250);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(195, 34);
+            this.label4.Size = new System.Drawing.Size(154, 28);
             this.label4.TabIndex = 24;
             this.label4.Text = "Date of Birth";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
-            this.label3.Location = new System.Drawing.Point(90, 196);
+            this.label3.Font = new System.Drawing.Font("Arial", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(41)))), ((int)(((byte)(133)))));
+            this.label3.Location = new System.Drawing.Point(69, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 34);
+            this.label3.Size = new System.Drawing.Size(76, 28);
             this.label3.TabIndex = 23;
             this.label3.Text = "Email";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
-            this.label2.Location = new System.Drawing.Point(90, 129);
+            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(41)))), ((int)(((byte)(133)))));
+            this.label2.Location = new System.Drawing.Point(69, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 34);
+            this.label2.Size = new System.Drawing.Size(132, 28);
             this.label2.TabIndex = 22;
             this.label2.Text = "Last Name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
-            this.label1.Location = new System.Drawing.Point(90, 65);
+            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(41)))), ((int)(((byte)(133)))));
+            this.label1.Location = new System.Drawing.Point(69, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 34);
+            this.label1.Size = new System.Drawing.Size(135, 28);
             this.label1.TabIndex = 21;
             this.label1.Text = "First Name";
             // 
             // btnUpdateComp
             // 
-            this.btnUpdateComp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
+            this.btnUpdateComp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(41)))), ((int)(((byte)(133)))));
             this.btnUpdateComp.FlatAppearance.BorderSize = 0;
             this.btnUpdateComp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateComp.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUpdateComp.ForeColor = System.Drawing.Color.White;
             this.btnUpdateComp.Location = new System.Drawing.Point(186, 413);
             this.btnUpdateComp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateComp.Name = "btnUpdateComp";
@@ -152,10 +153,11 @@ namespace TrackerUI
             // 
             // btnDeleteComp
             // 
-            this.btnDeleteComp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
+            this.btnDeleteComp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(41)))), ((int)(((byte)(133)))));
             this.btnDeleteComp.FlatAppearance.BorderSize = 0;
             this.btnDeleteComp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteComp.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteComp.ForeColor = System.Drawing.Color.White;
             this.btnDeleteComp.Location = new System.Drawing.Point(447, 413);
             this.btnDeleteComp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteComp.Name = "btnDeleteComp";
@@ -167,16 +169,17 @@ namespace TrackerUI
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(41)))), ((int)(((byte)(133)))));
             this.btnCancel.Location = new System.Drawing.Point(688, 11);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 53);
+            this.btnCancel.Size = new System.Drawing.Size(61, 44);
             this.btnCancel.TabIndex = 32;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "X";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 

@@ -39,7 +39,7 @@ namespace TrackerUI
             // 
             // txtTournamentName
             // 
-            this.txtTournamentName.Location = new System.Drawing.Point(131, 118);
+            this.txtTournamentName.Location = new System.Drawing.Point(400, 110);
             this.txtTournamentName.Name = "txtTournamentName";
             this.txtTournamentName.Size = new System.Drawing.Size(246, 22);
             this.txtTournamentName.TabIndex = 11;
@@ -49,7 +49,7 @@ namespace TrackerUI
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(41)))), ((int)(((byte)(133)))));
-            this.label3.Location = new System.Drawing.Point(131, 84);
+            this.label3.Location = new System.Drawing.Point(154, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 24);
             this.label3.TabIndex = 10;
@@ -60,7 +60,7 @@ namespace TrackerUI
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(41)))), ((int)(((byte)(133)))));
-            this.label2.Location = new System.Drawing.Point(131, 172);
+            this.label2.Location = new System.Drawing.Point(154, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 24);
             this.label2.TabIndex = 9;
@@ -68,9 +68,9 @@ namespace TrackerUI
             // 
             // txtTournamentDate
             // 
-            this.txtTournamentDate.Location = new System.Drawing.Point(131, 206);
+            this.txtTournamentDate.Location = new System.Drawing.Point(400, 195);
             this.txtTournamentDate.Name = "txtTournamentDate";
-            this.txtTournamentDate.Size = new System.Drawing.Size(200, 22);
+            this.txtTournamentDate.Size = new System.Drawing.Size(246, 22);
             this.txtTournamentDate.TabIndex = 8;
             // 
             // btnUpdateT

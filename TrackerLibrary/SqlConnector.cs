@@ -92,7 +92,6 @@ namespace TrackerLibrary
             List<TournamentModel> output;
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
             {
-                //output = connection.Query<TournamentModel>("dbo.spTournaments_GetAll").ToList();
                 output = connection.Query<TournamentModel>($"SELECT * FROM Tournament").ToList();
                 var p = new DynamicParameters();
 
@@ -268,6 +267,51 @@ namespace TrackerLibrary
                 output = connection.Query<DivisionModel>("dbo.spDivision_GetByTournament", p, commandType: CommandType.StoredProcedure).ToList();
             }
             return output;
+        }
+
+
+        //Not finished
+        public DivisionModel GetDivisionModel(int divisionId)
+        {
+            DivisionModel model = new DivisionModel();
+            List<CompetitorModel> competitors = new List<CompetitorModel>();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@DivisionId", divisionId);
+                model.GeneratedMatches = connection.Query<MatchModel>($"SELECT * FROM Match WHERE DivisionId = {divisionId}").ToList();
+                foreach(MatchModel match in model.GeneratedMatches)
+                {
+                    var c = new DynamicParameters();
+                    c.Add("@MatchId", match.Id);
+                    match.EnteredCompetitorsForThisMatch = connection.Query<CompetitorModel>("dbo.spCompetitor_GetByMatch", c, commandType: CommandType.StoredProcedure).ToList();
+                    foreach(CompetitorModel comp in match.EnteredCompetitorsForThisMatch)
+                    {
+                        competitors.Add(comp);
+                    }
+                                       
+                }
+                model.EnteredCompetitors = competitors;
+            }
+            return model;
+        }
+
+        public void CreateMatches(List<MatchModel> matches)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString("DatabaseConnection")))
+            {
+                foreach(MatchModel match in matches)
+                {
+                    var c = new DynamicParameters();
+                    c.Add("@Comp1ID", match.Competitor1Id);
+                    c.Add("@Comp2ID", match.Competitor2Id);
+                    c.Add("@DivisionId", match.DivisionId);
+                    c.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                    connection.Execute("dbo.spMatch_Insert", c, commandType: CommandType.StoredProcedure);
+                    match.Id = c.Get<int>("@id");
+                }
+            }
         }
     }
 }

@@ -40,22 +40,22 @@ namespace TrackerUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
-            this.label1.Location = new System.Drawing.Point(276, 61);
+            this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(211, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 33);
+            this.label1.Size = new System.Drawing.Size(378, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Create Tournament";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnCreateT
             // 
-            this.btnCreateT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
-            this.btnCreateT.FlatAppearance.BorderSize = 0;
+            this.btnCreateT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(64)))), ((int)(((byte)(102)))));
             this.btnCreateT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateT.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCreateT.Location = new System.Drawing.Point(357, 335);
+            this.btnCreateT.ForeColor = System.Drawing.Color.White;
+            this.btnCreateT.Location = new System.Drawing.Point(333, 335);
             this.btnCreateT.Name = "btnCreateT";
             this.btnCreateT.Size = new System.Drawing.Size(135, 58);
             this.btnCreateT.TabIndex = 1;
@@ -65,19 +65,20 @@ namespace TrackerUI
             // 
             // txtTournamentDate
             // 
-            this.txtTournamentDate.Location = new System.Drawing.Point(82, 266);
+            this.txtTournamentDate.Location = new System.Drawing.Point(357, 241);
             this.txtTournamentDate.Name = "txtTournamentDate";
-            this.txtTournamentDate.Size = new System.Drawing.Size(200, 22);
+            this.txtTournamentDate.Size = new System.Drawing.Size(331, 22);
             this.txtTournamentDate.TabIndex = 2;
             this.txtTournamentDate.ValueChanged += new System.EventHandler(this.txtTournamentDate_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
-            this.label2.Location = new System.Drawing.Point(79, 232);
+            this.label2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Italic);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(119, 234);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 17);
+            this.label2.Size = new System.Drawing.Size(180, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tournament Date";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -85,19 +86,20 @@ namespace TrackerUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(245)))), ((int)(((byte)(174)))));
-            this.label3.Location = new System.Drawing.Point(82, 144);
+            this.label3.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(119, 166);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 17);
+            this.label3.Size = new System.Drawing.Size(191, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tournament Name";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtTournamentName
             // 
-            this.txtTournamentName.Location = new System.Drawing.Point(85, 178);
+            this.txtTournamentName.Location = new System.Drawing.Point(357, 173);
             this.txtTournamentName.Name = "txtTournamentName";
-            this.txtTournamentName.Size = new System.Drawing.Size(246, 22);
+            this.txtTournamentName.Size = new System.Drawing.Size(331, 22);
             this.txtTournamentName.TabIndex = 5;
             this.txtTournamentName.TextChanged += new System.EventHandler(this.txtTournamentName_TextChanged);
             // 
@@ -105,7 +107,7 @@ namespace TrackerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(54)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(41)))), ((int)(((byte)(133)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtTournamentName);
             this.Controls.Add(this.label3);

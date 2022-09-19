@@ -10,11 +10,13 @@ namespace TrackerLibrary
     public interface IDataConnection
     {
         TournamentModel CreateTournament(TournamentModel model);
+        DivisionModel GetDivisionModel(int divisionId);
         CompetitorModel CreateCompetitor(CompetitorModel model);
         CompetitorModel UpdateCompetitor(CompetitorModel model);
         CompetitorModel DeleteCompetitor(CompetitorModel model);
         TournamentModel UpdateTournament(TournamentModel model);
         void CreateDivision(DivisionModel model);
+        void CreateMatches(List<MatchModel> matches);
         DivisionModel UpdateDivision(DivisionModel model);
         DivisionModel DeleteDivision(DivisionModel model);
         List<CompetitorModel> GetCompetitor_All();

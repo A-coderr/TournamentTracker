@@ -43,6 +43,7 @@ namespace TrackerUI
             this.btnUpdateDivision = new System.Windows.Forms.Button();
             this.btnDeleteDivision = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lblEntries = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmbDivType
@@ -209,12 +210,24 @@ namespace TrackerUI
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lblEntries
+            // 
+            this.lblEntries.AutoSize = true;
+            this.lblEntries.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntries.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(41)))), ((int)(((byte)(133)))));
+            this.lblEntries.Location = new System.Drawing.Point(14, 196);
+            this.lblEntries.Name = "lblEntries";
+            this.lblEntries.Size = new System.Drawing.Size(109, 24);
+            this.lblEntries.TabIndex = 52;
+            this.lblEntries.Text = "Total Entries";
+            // 
             // UDDivision
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.lblEntries);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDeleteDivision);
             this.Controls.Add(this.cmbDivType);
@@ -254,5 +267,6 @@ namespace TrackerUI
         private System.Windows.Forms.Button btnUpdateDivision;
         private System.Windows.Forms.Button btnDeleteDivision;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lblEntries;
     }
 }

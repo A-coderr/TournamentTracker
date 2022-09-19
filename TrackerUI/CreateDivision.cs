@@ -43,6 +43,8 @@ namespace TrackerUI
             lstCompInDiv.DataSource = null;
             lstCompInDiv.DataSource = selectedCompetitors;
             lstCompInDiv.DisplayMember = "FullName";
+
+            lblEntries.Text = $"Total Entries: {selectedCompetitors.Count}";
         }
 
         private void btnAddDivision_Click(object sender, EventArgs e)

@@ -51,5 +51,15 @@ namespace TrackerUI
             MainDashboard.mainDashboardInstance.mainPanel.Controls.Add(ud);
             ud.Show();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frmDivisions_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

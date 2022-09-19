@@ -20,6 +20,7 @@ namespace TrackerLibrary.Models
 
         public List<CompetitorModel> EnteredCompetitors { get; set; } = new List<CompetitorModel>();
         public List<CompetitorModel> CompetitorsToRemove { get; set; } = new List<CompetitorModel>();
+        public List<MatchModel> GeneratedMatches { get; set; } = new List<MatchModel>();
 
         //public List<List<MatchupModel>> Rounds { get; set; } = new List<List<MatchupModel>>();
 
